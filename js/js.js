@@ -1,4 +1,3 @@
-"use strict";
 document.addEventListener('DOMContentLoaded', iniciarPagina);
 
 function iniciarPagina() {
@@ -6,26 +5,20 @@ function iniciarPagina() {
 /*----------------------------------------------------------------------------------------------------------*/
 /*------------------------------------------EXTRAS----------------------------------------------------------*/
 /*----------------------------------------------------------------------------------------------------------*/
-/*----------------------------------------------------------------------------------------------------------*/
-function linkear_vehiculo(){
-    location.href = 'vehiculos.html';
-}
-function linkear_mantenimiento(){
-    location.href = 'mantenimiento.html';
-}
-
-let vehiculos = document.querySelector("#vehiculos");
-if (vehiculos){
-vehiculos.addEventListener("click", linkear_vehiculo);}
-let hogar = document.querySelector("#hogar");
-if(hogar){
-hogar.addEventListener("click", linkear_mantenimiento);}
-let salud = document.querySelector("#salud");
-if(salud){
-salud.addEventListener("click", linkear_mantenimiento);}
-let tecnologia = document.querySelector("#tecnologia");
-if(tecnologia){
-tecnologia.addEventListener("click", linkear_mantenimiento);}
+/*-------------------------------------------logo-----------------------------------------------------------*/
+    function linkear_home(){
+        location.href = 'index.html';
+    }
+    
+    let home = document.querySelector(".logo");
+    if (home){
+    home.addEventListener("click", linkear_home);}
+/*-----------------------------------------nav celular----------------------------------------------------*/
+let botonMovil = document.querySelector(".botonMovil");
+botonMovil.addEventListener("click", function(){
+    let menu = document.querySelector("#menuSuperior_Movil")
+    menu.classList.toggle("invisible");
+})
 /*-----------------------------------------menu vehiculos--------------------------------------------------*/
 function ocultarDivs(){
     let parrafos = document.querySelectorAll("section");
@@ -55,13 +48,30 @@ botonMoto.addEventListener("click", function(){
     let planC = document.querySelector("#motocicletas")
     planC.classList.remove("invisible");
 })}
-/*---------------------------------------------nav--------------------------------------------------------*/
-let botonMovil = document.querySelector(".botonMovil");
-botonMovil.addEventListener("click", function(){
-    let menu = document.querySelector("#menuSuperior_Movil")
-    menu.classList.toggle("invisible");
-})
-/*---------------------------------------------------------------------------*/
+/*----------------------------------------------menu home---------------------------------------------------*/
+function linkear_vehiculo(){
+    location.href = 'vehiculos.html';
+}
+function linkear_mantenimiento(){
+    location.href = 'mantenimiento.html';
+}
+function linkear_salud(){
+    location.href = 'salud.html';
+}
+
+let vehiculos = document.querySelector("#vehiculos");
+if (vehiculos){
+vehiculos.addEventListener("click", linkear_vehiculo);}
+let hogar = document.querySelector("#hogar");
+if(hogar){
+hogar.addEventListener("click", linkear_mantenimiento);}
+let salud = document.querySelector("#salud");
+if(salud){
+salud.addEventListener("click", linkear_salud);}
+let tecnologia = document.querySelector("#tecnologia");
+if(tecnologia){
+tecnologia.addEventListener("click", linkear_mantenimiento);}
+/*-----------------------------------------captcha contacto------------------------------------------------*/
 const numero_al_azar= Math.floor((Math.random() * 1000));
 
 let escribir_captcha = document.querySelector("#captchaid");
