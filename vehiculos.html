@@ -30,7 +30,7 @@
             <li><a href="vehiculos.html">Vehiculos</a></li>
             <li><a href="mantenimiento.html">Hogar</a></li>
             <li><a href="mantenimiento.html">Tecnologia</a></li>
-            <li><a href="mantenimiento.html">Salud</a></li>
+            <li><a href="salud.html">Salud</a></li>
             <li><a href="mantenimiento.html">Formas de Pago</a></li>
             <li><a href="mantenimiento.html">Preguntas Frecuentes</a></li>
             <li><a href="contacto.html">Contacto</a></li>
@@ -45,138 +45,156 @@
             <h1>VEHÍCULOS</h1>
         </div>
     </header>
-
+    
     <aside class="menu_vehiculos">
-        <a href="#autos">Autos</a>
-        <a href="#bicicletas">Bicicletas</a>
-        <a href="#motocicletas">Motocicletas</a>
+        <a id="autobtn">Autos</a>
+        <a id="bicibtn">Bicicletas</a>
+        <a id="motobtn">Motocicletas</a>
     </aside>
-    <section>
-        <div class="titulo_plan">
-            <h2 class="posicion_izquierda" id="autos">Autos</h2>
-        </div>
-        <div class="imagen_auto">
-            <img src="images/auto.jpg" alt="auto chevrolet">
-        </div>
-        <table class="tabla_autos">
-            <tr>
-                <thead>
-                    <th>Planes:</th>
-                    <th>Plan contra todo riesgo</th>
-                    <th>Contra terceros</th>
-                    <th>Contra terceros y daños naturales</th>
-            </tr>
-            </thead>
-            <tr>
-                <td>daños por granizo</td>
-                <td>Cubre</td>
-                <td>No cubre</td>
-                <td>Cubre</td>
-            </tr>
-            <tr>
-                <td>Accidente total</td>
-                <td>Cubre</td>
-                <td>No cubre</td>
-                <td>No cubre</td>
-            </tr>
-            <tr>
-                <td>Robo o hurto total</td>
-                <td>Cubre</td>
-                <td>No cubre</td>
-                <td>No cubre</td>
-            </tr>
-            <tr>
-                <td>Responsabilidad civil</td>
-                <td>Cubre</td>
-                <td>Cubre</td>
-                <td>Cubre</td>
-            </tr>
-        </table>
-    </section>
-    <section>
-        <div class="titulo_plan">
-            <h2 class="posicion_derecha" id="bicicletas">Bicicletas</h2>
-        </div>
-        <div class="imagen_bicicleta">
-            <img src="images/bicicleta.jpg" alt="Bicicleta" title="la bicicleta de un vendedor de waffles">
-        </div>
-        <table class="tabla_bicicletas">
-            <tr>
-                <thead>
-                    <th>Planes:</th>
-                    <th>Plan contra robo/accidente</th>
-                    <th>Contra terceros</th>
-                    <th>Contra desgaste</th>
-            </tr>
-            </thead>
-            <tr>
-                <td>daños por desgaste</td>
-                <td>No cubre</td>
-                <td>No cubre</td>
-                <td>Cubre</td>
-            </tr>
-            <tr>
-                <td>Accidente total</td>
-                <td>Cubre</td>
-                <td>No cubre</td>
-                <td>No cubre</td>
-            </tr>
-            <tr>
-                <td>Robo o hurto total</td>
-                <td>Cubre</td>
-                <td>No cubre</td>
-                <td>No cubre</td>
-            </tr>
-            <tr>
-                <td>Responsabilidad civil</td>
-                <td>Cubre</td>
-                <td>Cubre</td>
-                <td>Cubre</td>
-            </tr>
-        </table>
-    </section>
-    <section>
-        <div class="titulo_plan">
-            <h2 class="posicion_izquierda" id="motocicletas">Motocicletas</h2>
-        </div>
-        <div class="imagen_motocicleta">
-            <img src="images/moto.jpg" alt="Motocicleta" title="solo de exhibición">
-        </div>
-        <table class="tabla_motocicletas">
-            <tr>
-                <thead>
-                    <th>Planes:</th>
-                    <th>Plan contra robo/accidente</th>
-                    <th>contra terceros</th>
-                    <th>Contra incendios</th>
-            </tr>
-            </thead>
-            <tr>
-                <td>daños por incendios</td>
-                <td>No cubre</td>
-                <td>No cubre</td>
-                <td>Cubre</td>
-            </tr>
-            <tr>
-                <td>Accidente total</td>
-                <td>Cubre</td>
-                <td>No cubre</td>
-                <td>No cubre</td>
-            </tr>
-            <tr>
-                <td>Robo o hurto total</td>
-                <td>Cubre</td>
-                <td>No cubre</td>
-                <td>No cubre</td>
-            </tr>
-            <tr>
-                <td>Responsabilidad civil</td>
-                <td>Cubre</td>
-                <td>Cubre</td>
-                <td>Cubre</td>
-            </tr>
-        </table>
-    </section>
+
+    <article class="planesTabla">
+
+        <section id="autos" class="invisible">
+            <div class="plan">
+
+                <div class="titulo_plan">
+                    <h2>Autos</h2>
+                </div>
+
+                <div class="imagenPlan">
+                    <img src="images/auto.jpg" alt="auto chevrolet">
+                </div>
+
+                <table class="tabla">
+                    <tr>
+                        <thead>
+                            <th>Planes:</th>
+                            <th>Plan contra todo riesgo</th>
+                            <th>Contra terceros</th>
+                            <th>Contra terceros y daños naturales</th>
+                    </tr>
+                    </thead>
+                    <tr>
+                        <td>daños por granizo</td>
+                        <td>Cubre</td>
+                        <td>No cubre</td>
+                        <td>Cubre</td>
+                    </tr>
+                    <tr>
+                        <td>Accidente total</td>
+                        <td>Cubre</td>
+                        <td>No cubre</td>
+                        <td>No cubre</td>
+                    </tr>
+                    <tr>
+                        <td>Robo o hurto total</td>
+                        <td>Cubre</td>
+                        <td>No cubre</td>
+                        <td>No cubre</td>
+                    </tr>
+                    <tr>
+                        <td>Responsabilidad civil</td>
+                        <td>Cubre</td>
+                        <td>Cubre</td>
+                        <td>Cubre</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <section id="bicicletas" class="invisible">
+
+            <div class="plan">
+                <div class="titulo_plan">
+                    <h2>Bicicletas</h2>
+                </div>
+
+                <div class="imagenPlan">
+                    <img src="images/bicicleta.jpg" alt="Bicicleta" title="la bicicleta de un vendedor de waffles">
+                </div>
+                <table class="tabla">
+                    <tr>
+                        <thead>
+                            <th>Planes:</th>
+                            <th>Plan contra robo/accidente</th>
+                            <th>Contra terceros</th>
+                            <th>Contra desgaste</th>
+                    </tr>
+                    </thead>
+                    <tr>
+                        <td>daños por desgaste</td>
+                        <td>No cubre</td>
+                        <td>No cubre</td>
+                        <td>Cubre</td>
+                    </tr>
+                    <tr>
+                        <td>Accidente total</td>
+                        <td>Cubre</td>
+                        <td>No cubre</td>
+                        <td>No cubre</td>
+                    </tr>
+                    <tr>
+                        <td>Robo o hurto total</td>
+                        <td>Cubre</td>
+                        <td>No cubre</td>
+                        <td>No cubre</td>
+                    </tr>
+                    <tr>
+                        <td>Responsabilidad civil</td>
+                        <td>Cubre</td>
+                        <td>Cubre</td>
+                        <td>Cubre</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <section id="motocicletas" class="invisible">
+            
+            <div class="plan">
+                <div class="titulo_plan">
+                    <h2>Motocicletas</h2>
+                </div>
+                <div class="imagenPlan">
+                    <img src="images/moto.jpg" alt="Motocicleta" title="solo de exhibición">
+                </div>
+                <table class="tabla">
+                    <tr>
+                        <thead>
+                            <th>Planes:</th>
+                            <th>Plan contra robo/accidente</th>
+                            <th>contra terceros</th>
+                            <th>Contra incendios</th>
+                    </tr>
+                    </thead>
+                    <tr>
+                        <td>daños por incendios</td>
+                        <td>No cubre</td>
+                        <td>No cubre</td>
+                        <td>Cubre</td>
+                    </tr>
+                    <tr>
+                        <td>Accidente total</td>
+                        <td>Cubre</td>
+                        <td>No cubre</td>
+                        <td>No cubre</td>
+                    </tr>
+                    <tr>
+                        <td>Robo o hurto total</td>
+                        <td>Cubre</td>
+                        <td>No cubre</td>
+                        <td>No cubre</td>
+                    </tr>
+                    <tr>
+                        <td>Responsabilidad civil</td>
+                        <td>Cubre</td>
+                        <td>Cubre</td>
+                        <td>Cubre</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+    </article>
     <footer>
         <div class="piePagina">
             <ul>
@@ -210,9 +228,9 @@
             <ul>
                 <h5>Salud</h5>
                 </li>
-                <li><a href="mantenimiento.html">Basico</a></li>
-                <li><a href="mantenimiento.html">Medio</a></li>
-                <li><a href="mantenimiento.html">Premium</a></li>
+                <li><a href="salud.html">Basico</a></li>
+                <li><a href="salud.html">Medio</a></li>
+                <li><a href="salud.html">Premium</a></li>
             </ul>
             <ul>
                 <li><a href="mantenimiento.html">
