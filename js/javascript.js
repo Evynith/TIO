@@ -26,6 +26,35 @@ salud.addEventListener("click", linkear_mantenimiento);}
 let tecnologia = document.querySelector("#tecnologia");
 if(tecnologia){
 tecnologia.addEventListener("click", linkear_mantenimiento);}
+/*-----------------------------------------menu vehiculos--------------------------------------------------*/
+function ocultarDivs(){
+    let parrafos = document.querySelectorAll("section");
+    for (let i = 0; i < parrafos.length; i++) {
+        let element = parrafos [i];
+        element.classList.add("invisible");
+}}
+
+let botonAuto = document.querySelector("#autobtn");
+if(botonAuto){
+botonAuto.addEventListener("click", function(){
+    ocultarDivs();
+    let planA = document.querySelector("#autos")
+    planA.classList.remove("invisible");
+})}
+let botonBici = document.querySelector("#bicibtn");
+if(botonBici){
+botonBici.addEventListener("click", function(){
+    ocultarDivs();
+    let planB = document.querySelector("#bicicletas")
+    planB.classList.remove("invisible");
+})}
+let botonMoto = document.querySelector("#motobtn");
+if(botonMoto){
+botonMoto.addEventListener("click", function(){
+    ocultarDivs();
+    let planC = document.querySelector("#motocicletas")
+    planC.classList.remove("invisible");
+})}
 /*---------------------------------------------------------------------------*/
 const numero_al_azar= Math.floor((Math.random() * 1000));
 

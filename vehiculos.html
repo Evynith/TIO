@@ -30,23 +30,25 @@
     </header>
 
     <aside class="menu_vehiculos">
-        <a href="#autos">Autos</a>
-        <a href="#bicicletas">Bicicletas</a>
-        <a href="#motocicletas">Motocicletas</a>
+        <a id="autobtn" >Autos</a>
+        <a id="bicibtn" >Bicicletas</a>
+        <a id="motobtn" >Motocicletas</a>
     </aside>
 
-    <section id="autos" class="invisible">
+    <article class="planesTabla">
+
+        <section id="autos" class="invisible">
             <div class="plan">
 
                 <div class="titulo_plan">
-                    <h2 class="posicion_izquierda" id="autos">Autos</h2>
+                    <h2>Autos</h2>
                 </div>
-                
-                <div class="imagen_auto">
+
+                <div class="imagenPlan">
                     <img src="images/auto.jpg" alt="auto chevrolet">
                 </div>
 
-                <table class="tabla_autos">
+                <table class="tabla">
                     <tr>
                         <thead>
                             <th>Planes:</th>
@@ -82,17 +84,18 @@
                 </table>
             </div>
         </section>
+
         <section id="bicicletas" class="invisible">
+
             <div class="plan">
                 <div class="titulo_plan">
-                    <h2 class="posicion_derecha" id="bicicletas">Bicicletas</h2>
+                    <h2>Bicicletas</h2>
                 </div>
 
-                <div class="imagen_bicicleta">
+                <div class="imagenPlan">
                     <img src="images/bicicleta.jpg" alt="Bicicleta" title="la bicicleta de un vendedor de waffles">
                 </div>
-
-                <table class="tabla_bicicletas">
+                <table class="tabla">
                     <tr>
                         <thead>
                             <th>Planes:</th>
@@ -128,17 +131,17 @@
                 </table>
             </div>
         </section>
-        <section id="motocicletas" class="invisible">
-            <div class="plan">
 
+        <section id="motocicletas" class="invisible">
+            
+            <div class="plan">
                 <div class="titulo_plan">
-                    <h2 class="posicion_izquierda" id="motocicletas">Motocicletas</h2>
+                    <h2>Motocicletas</h2>
                 </div>
-                <div class="imagen_motocicleta">
+                <div class="imagenPlan">
                     <img src="images/moto.jpg" alt="Motocicleta" title="solo de exhibición">
                 </div>
-
-                <table class="tabla_motocicletas">
+                <table class="tabla">
                     <tr>
                         <thead>
                             <th>Planes:</th>
@@ -174,6 +177,7 @@
                 </table>
             </div>
         </section>
+    </article>    
     <div id="separador"></div>
 
     <footer>
