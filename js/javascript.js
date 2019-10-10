@@ -55,6 +55,12 @@ botonMoto.addEventListener("click", function(){
     let planC = document.querySelector("#motocicletas")
     planC.classList.remove("invisible");
 })}
+/*---------------------------------------------nav--------------------------------------------------------*/
+let botonMovil = document.querySelector(".botonMovil");
+botonMovil.addEventListener("click", function(){
+    let menu = document.querySelector("#menuSuperior_Movil")
+    menu.classList.toggle("invisible");
+})
 /*---------------------------------------------------------------------------*/
 const numero_al_azar= Math.floor((Math.random() * 1000));
 

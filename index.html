@@ -14,20 +14,39 @@
 </head>
 
 <body>
-    <div class="presentacion_home">
-        <nav>
-            <ul class="menu_superior">
-                <img src="images/logo.png" alt="logo" class="logo">
-                <li class="boton_superior"> <i class="fas fa-search"></i></li>
-                <li><a class="boton_superior" href="contacto.html"><i class="fas fa-headset"></i> Contactanos</a></li>
-                <li><a class="boton_superior" href="#planes"><i class="fas fa-briefcase"></i> Planes</a></li>
-                <li><a class="boton_superior" href="index.html"><i class="fas fa-city"></i> Inicio</a></li>
-            </ul>
-        </nav>
-        <header>
-            <div class="imagen_home" alt="presentacion"></div>
-        </header>
-    </div>
+    <nav>
+        <figure class="logo">
+            <img src="images/logo.png" alt="logo" class="logo">
+        </figure>
+
+        <ul class="menuSuperior_PC">
+            <li><a class="botonSuperior" href="#planes"><i class="fas fa-briefcase"></i> Planes</a></li>
+            <li><a class="botonSuperior" href="contacto.html"><i class="fas fa-headset"></i> Contactanos</a></li>
+            <li class="botonSuperior"> <i class="fas fa-search"></i></li>
+        </ul>
+
+        <ul class="invisible" id="menuSuperior_Movil">
+            <li><a href="vehiculos.html">Vehiculos</a></li>
+            <li><a href="mantenimiento.html">Hogar</a></li>
+            <li><a href="mantenimiento.html">Tecnologia</a></li>
+            <li><a href="mantenimiento.html">Salud</a></li>
+            <li><a href="mantenimiento.html">Formas de Pago</a></li>
+            <li><a href="mantenimiento.html">Preguntas Frecuentes</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+
+        <button class="botonMovil">ATR</button>
+
+    </nav>
+
+    <header class="presentacionHome">
+        <div class="separador">
+            <div class="letrasHome"></div>
+            <div class="espacioExtraHome"></div>
+        </div>
+
+        <div class="imagenHome" alt="presentacion"></div>
+    </header>
 
     <article id="menuHome">
             <ul class="menuInferior" id="planes">
