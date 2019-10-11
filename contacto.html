@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <dic class="contenedorC">
+    <dic class="contenedor">
 
         <nav>
             <figure class="logo">
@@ -22,12 +22,13 @@
             </figure>
 
             <ul class="menuSuperior_PC">
-                <li><a class="botonSuperior" href="#planes"><i class="fas fa-briefcase"></i> Planes</a></li>
+                <li><a class="botonSuperior" href="index.html"><i class="fas fa-briefcase"></i> Planes</a></li>
                 <li><a class="botonSuperior" href="contacto.html"><i class="fas fa-headset"></i> Contactanos</a></li>
                 <li class="botonSuperior"> <i class="fas fa-search"></i></li>
             </ul>
 
             <ul class="invisible" id="menuSuperior_Movil">
+                <li><a href="index.html">Inicio</a></li>
                 <li><a href="vehiculos.html">Vehiculos</a></li>
                 <li><a href="mantenimiento.html">Hogar</a></li>
                 <li><a href="mantenimiento.html">Tecnologia</a></li>
@@ -41,11 +42,13 @@
 
         </nav>
 
-        <header>
+        <div class="centro">
+        <header class="header">
             <div class="presentacion_contacto">
                 <h1>Contactanos</h1>
             </div>
         </header>
+        
 
         <article id="centroContacto">
             <section>
@@ -100,15 +103,17 @@
                     <div>
                         <p>CAPTCHA</p>
                         <p id="captchaid">----</p>
-                        <label>Ingrese el número: <input type="text" name="captcha" value="" id="leer" />
+                        <label>Ingrese el número: <input type="number" name="captcha" value="" id="leer" />
                     </div>
-                    <input type="button" id="boton_enviar" name="enviar" value="Enviar" />
-                    <p id="mensaje_comprobar"></p>
+                    <input type="button" id="btnEnviarCaptcha" name="enviar" value="Enviar" />
+                    <p id="mensajeComprobar"></p>
                 </form>
                 </div>
                 </div>
             </section>
         </article>
+
+        </div>
 
         <footer>
             <div class="piePagina">

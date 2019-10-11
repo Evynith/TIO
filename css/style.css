@@ -1,10 +1,11 @@
-*{
+/*-------------------------------------------------general-----------------------------------------------*/
+* {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     list-style:none;
     margin: 0;
     padding: 0;
 }
-body,html,.contenedorH,.contenedorC{
+body,html,.contenedor{
     width: 100%;
     height: 100%;    
 }
@@ -14,9 +15,15 @@ a:link{
 footer a:visited {
     color: #003fff;
 }
-/*---------------------------------------------------------------------------------------------------*/
-/*-------------------------------------------------HOME----------------------------------------------*/
-/*---------------------------------------------------------------------------------------------------*/
+.invisible{
+    display: none;
+}
+.centro{
+    grid-area: centro;
+}
+.header{
+    grid-area: header;
+}
 /*-------------------------------------------------nav-----------------------------------------------*/
 .logo{
     width: 40%;
@@ -56,42 +63,6 @@ nav{
 #menuSuperior_Movil a{
     color: #ffffff;
 }
-.invisible{
-    display: none;
-}
-/*-----------------------------------------menu---------------------------------------------------------*/
-#menuHome{
-    grid-area: article;
-}
-.botonInferior{
-    background-color: rgb(50, 5, 199);
-    color: #ffffff;
-}
-/*------------------------------------------presentacion----------------------------------------------*/
-#presentacionHome{
-    background-color: rgb(173,186,218);
-    grid-area: header;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-}
-.separador{
-    display: grid;
-    grid-template-rows: 1fr 3fr;
-}
-.espacioExtraHome{
-    background-color: rgb(173,186,218);
-    flex-grow: 8;
-    width: auto;
-    height: auto;
-}
-.letrasHome{
-    background: url(images/presentacion1Izquierda.jpeg) no-repeat center;
-    background-size: cover;
-}
-.imagenHome{
-    background: url(images/presentacion1Derecha.jpeg) no-repeat center;
-    background-size: cover;
-}
 /*----------------------------------------footer---------------------------------------------------------*/
 footer{
     grid-area: footer;
@@ -104,6 +75,56 @@ footer{
     display: flex;
     justify-content: space-around;
     align-items: flex-end;
+}
+/*------------------------------------------tabla-------------------------------------------*/
+table{
+    border-collapse: collapse;
+}
+th,td{
+    border: solid #005BBB;
+    padding: 6px;
+}
+thead{
+    background-color: #005BBB;
+    color: white;
+    border-bottom: #003fff 3px solid;
+}
+/*---------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------HOME----------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------menu------------------------------------------------*/
+.botonInferior{
+    background-color: rgb(50, 5, 199);
+    color: #ffffff;
+    margin: 4%;
+    text-align:center;
+}
+/*------------------------------------------centro-----------------------------------------------------*/
+.centroIndex{ 
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+/*------------------------------------------presentacion----------------------------------------------*/
+.separadorHeader{
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+}
+.presentacionHome{
+    display: grid;
+    grid-template-columns: 2fr 4fr;
+}
+.espacioExtraHome{
+    background-color: rgb(173,186,218);
+    width: auto;
+    height: auto;
+}
+.letrasHome{
+    background: url(images/presentacion1Izquierda.jpeg) no-repeat center;
+    background-size: cover;
+}
+.imagenHome{
+    background: url(images/presentacion1Derecha.jpeg) no-repeat center;
+    background-size: cover;
 }
 /*-------------------------------------------------------------------------------------------------------*/
 /*----------------------------------------MANTENIMIENTO--------------------------------------------------*/
@@ -208,35 +229,59 @@ footer{
   display: grid;
   grid-template-columns: 70% 30%;
 }
-.tabla{
+.tablaVehiculos{
     grid-area: derecha;
 }
-/*------------------------------------------tabla-------------------------------------------*/
-table{
-    border-collapse: collapse;
-}
-th,td{
-    border: solid #005BBB;
-    padding: 6px;
-}
-thead{
-    background-color: #005BBB;
-    color: white;
-    border-bottom: #003fff 3px solid;
+/*---------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------SALUD--------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------presentacion---------------------------------------------------*/
+.presentacion_salud{
+    background-image: url(images/presentacion2.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display:flex;  
+    flex-direction: row;
+    align-items: stretch;
+  }
+  .presentacion_salud h1{
+    font-size: 300%;
+    color: #ffffff;
+    border: 0;
+    margin: 3%;
+  }
+/*-------------------------------------------centro------------------------------------------------------*/
+  #centroSalud{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+.resaltado{
+    background-color: yellow;
 }
 /*----------------------------------------media query------------------------------------------*/
 /*---------------------------------------------------------------------------------------------*/
 /*--------------------------------------------MOVIL--------------------------------------------*/
 @media only screen and (max-width: 650px) {
-    .contenedorH{
+    .contenedor{
         display: grid;
          grid-template-columns: auto;
-         grid-template-rows: 7% 50% 35% auto;
+         grid-template-rows: 7% auto 10%;
          grid-template-areas:
              "nav"
-             "header"
-             "article"
+             "centro"
              "footer";
+    }
+    .centroIndex{
+        display: flex;
+        flex-direction: column;
+    }
+    .presentacionHome{
+        flex-grow: 8;
+    }
+    .menuHome{
+        flex-grow: 2;
     }
     .logo{
         visibility: hidden;
@@ -245,10 +290,8 @@ thead{
         display: none;
      }
     .botonInferior{
-         height: 15%; 
-         margin: 3%; 
          display: flex;
-         justify-content: center;
+         flex-direction: column;
     }
     .menuInferior p{
          display: none;
@@ -264,33 +307,32 @@ thead{
         flex-direction: row;
         justify-content: space-around;
     }
+    .presentacionHome{
+        grid-area: header;
+    }
 }
- /*----------------------------------------------PC----------------------------------------------*/ 
+ /*----------------------------------------------PC-------------------------------------------*/ 
 @media only screen and (min-width:650px) {
-   .contenedorH{
+   .contenedor{
     display: grid;
-    grid-template-columns: 20% 30% auto auto 15% 20%;
+    grid-template-columns: 20% auto 20%;
     grid-template-rows: 6% auto 17%;
     grid-template-areas:
-        ". nav nav nav nav ."
-        "header header header article article article"
-        "footer footer footer footer footer footer";
+        ". nav ."
+        "centro centro centro"
+        "footer footer footer";
    }
    .botonMovil{
        display: none;
    }
    .botonInferior{
-       width: 38%;
-       height: 38%;
-       margin: 3%;
-       padding: 10% 0 10% 0;
-       text-align: center;
+    padding: 20%;
    }
    .menuInferior{
-        height: auto;
-        display:flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
+       height: 100%;
+       display: grid;
+       grid-template-columns: 1fr 1fr;
+       grid-template-rows: 1fr 1fr;
    }
    footer{
        display: flex;

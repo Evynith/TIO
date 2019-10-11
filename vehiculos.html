@@ -15,18 +15,21 @@
 
 <body>
 
+    <div class="contenedor">
+
     <nav>
         <figure class="logo">
             <img src="images/logo.png" alt="logo" class="logo">
         </figure>
 
         <ul class="menuSuperior_PC">
-            <li><a class="botonSuperior" href="#planes"><i class="fas fa-briefcase"></i> Planes</a></li>
+            <li><a class="botonSuperior" href="index.html"><i class="fas fa-briefcase"></i> Planes</a></li>
             <li><a class="botonSuperior" href="contacto.html"><i class="fas fa-headset"></i> Contactanos</a></li>
             <li class="botonSuperior"> <i class="fas fa-search"></i></li>
         </ul>
 
         <ul class="invisible" id="menuSuperior_Movil">
+            <li><a href="index.html">Inicio</a></li>
             <li><a href="vehiculos.html">Vehiculos</a></li>
             <li><a href="mantenimiento.html">Hogar</a></li>
             <li><a href="mantenimiento.html">Tecnologia</a></li>
@@ -39,17 +42,19 @@
         <button class="botonMovil">ATR</button>
 
     </nav>
-
-    <header>
+    
+    <div class="centro">
+    <header class="header">
         <div class="presentacion_vehiculos" alt="presentacion">
             <h1>VEHÍCULOS</h1>
         </div>
     </header>
     
+
     <aside class="menu_vehiculos">
-        <a id="autobtn">Autos</a>
-        <a id="bicibtn">Bicicletas</a>
-        <a id="motobtn">Motocicletas</a>
+        <a id="autobtn" >Autos</a>
+        <a id="bicibtn" >Bicicletas</a>
+        <a id="motobtn" >Motocicletas</a>
     </aside>
 
     <article class="planesTabla">
@@ -61,11 +66,11 @@
                     <h2>Autos</h2>
                 </div>
 
-                <div class="imagenPlan">
+                <figure class="imagenPlan">
                     <img src="images/auto.jpg" alt="auto chevrolet">
-                </div>
+                </figure>>
 
-                <table class="tabla">
+                <table class="tablaVehiculos">
                     <tr>
                         <thead>
                             <th>Planes:</th>
@@ -109,10 +114,10 @@
                     <h2>Bicicletas</h2>
                 </div>
 
-                <div class="imagenPlan">
+                <figure class="imagenPlan">
                     <img src="images/bicicleta.jpg" alt="Bicicleta" title="la bicicleta de un vendedor de waffles">
-                </div>
-                <table class="tabla">
+                </figure>
+                <table class="tablaVehiculos">
                     <tr>
                         <thead>
                             <th>Planes:</th>
@@ -155,10 +160,10 @@
                 <div class="titulo_plan">
                     <h2>Motocicletas</h2>
                 </div>
-                <div class="imagenPlan">
+                <figure class="imagenPlan">
                     <img src="images/moto.jpg" alt="Motocicleta" title="solo de exhibición">
-                </div>
-                <table class="tabla">
+                </figure>
+                <table class="tablaVehiculos">
                     <tr>
                         <thead>
                             <th>Planes:</th>
@@ -195,6 +200,9 @@
             </div>
         </section>
     </article>
+
+    </div>
+
     <footer>
         <div class="piePagina">
             <ul>
@@ -255,6 +263,9 @@
             </ul>
         </div>
     </footer>
+
+    </div>
+
 </body>
 
 </html>
