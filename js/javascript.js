@@ -108,7 +108,7 @@ botonComprobar.addEventListener("click", leerdato);}
 let planes = [{
     "plan300": "Enfermedades Graves (ACV, Infarto o Cáncer) $100.000",
     "plan600": "Enfermedades Graves (ACV, Infarto o Cáncer) $200.000",
-    "plan900": "Enfermedades Graves (ACV, Infarto o Cáncer)$300.000",
+    "plan900": "Enfermedades Graves (ACV, Infarto o Cáncer) $300.000",
 },
 {
     "plan300": "Transplante de Órgano $100.000",
@@ -118,8 +118,8 @@ let planes = [{
 },
 {
     "plan300": "Internación por Cirugías: (monto máximo por día)",
-    "plan600": "Internación por Cirugías:(monto máximo por día)",
-    "plan900": "Internación por Cirugías:(monto máximo por día)",
+    "plan600": "Internación por Cirugías: (monto máximo por día)",
+    "plan900": "Internación por Cirugías: (monto máximo por día)",
 }]
 let cuerpoTabla = document.querySelector("#CuerpoTabla");
 let btn = document.querySelector("#BorrarTabla");
@@ -140,9 +140,14 @@ function CrearCeldas(indice, final) {
         let cell1 = row.insertCell(0);
         let cell2 = row.insertCell(1);
         let cell3 = row.insertCell(2);
+        let cell4 = row.insertCell(3); ///////////celda para boton
         cell1.innerHTML = planes[i].plan300;
         cell2.innerHTML = planes[i].plan600;
         cell3.innerHTML = planes[i].plan900;
+                                                    ////////////////////boton
+        let btn = document.createElement("button");   
+        btn.innerHTML = "Borrar fila";                   
+        cell4.appendChild(btn);
 }   }   }
 console.log(planes);
 
@@ -181,7 +186,7 @@ function Agregar3Valores() {
     console.log(planes);
 }
 /*--------------------------------------------------opcionales--------------------------------------------------------*/
-/*----------------------------------------------------buscar----------------------------------------------------------*/
+/*--------------------------------------------buscar y resaltar fila--------------------------------------------------*/
 function buscarTabla (palabraBuscada){
     let filas = document.querySelectorAll("tr");
     for (let i=0; i < filas.length; i++){
@@ -193,16 +198,29 @@ function buscarTabla (palabraBuscada){
             resaltarFila(celdas[j]);
 }   }   }   }
 function resaltarFila(lugar){
-let lugarEncontrado = lugar.parentElement;
-lugarEncontrado.classList.add("resaltado");
+    let lugarEncontrado = lugar.parentElement;
+    lugarEncontrado.classList.add("resaltado");
 }
 function recibirBusqueda(){
-let inputBuscado = document.getElementById("inputResaltaBusqueda").value;
-buscarTabla(inputBuscado);
+    let inputBuscado = document.getElementById("inputResaltaBusqueda").value;
+    buscarTabla(inputBuscado);
 }
 let btnResaltarBuscado = document.getElementById("btnResaltar");
-if(btnResaltarBuscado){
-btnResaltarBuscado.addEventListener("click", recibirBusqueda);}
+    if(btnResaltarBuscado){
+    btnResaltarBuscado.addEventListener("click", recibirBusqueda);}
 /*------------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------------*/
+/*---------------------------------------------eliminar en cada fila------------------------------------------------*/
+
+BtnBorrarFila();//borro de a una fila
+function BtnBorrarFila(){
+    let botones = document.querySelectorAll("button");
+    for (let i = 0 ; i < botones.length ; i++) {
+      botones[i].onclick = function() {
+        console.log("precionado");
+
+}   }   }
+
 
 }/*--llave final---*/
