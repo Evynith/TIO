@@ -27,7 +27,7 @@ function ocultarDivs(){
     for (let i = 0; i < parrafos.length; i++) {
         let element = parrafos [i];
         element.classList.add("invisible");
-}}
+}   }
 
 let botonAuto = document.querySelector("#autobtn");
 if(botonAuto){
@@ -74,35 +74,32 @@ let tecnologia = document.querySelector("#tecnologia");
 if(tecnologia){
 tecnologia.addEventListener("click", linkear_mantenimiento);}
 /*-----------------------------------------captcha contacto------------------------------------------------*/
-const numero_al_azar= Math.floor((Math.random() * 1000));
+captcha();
 
-let escribir_captcha = document.querySelector("#captchaid");
-if(escribir_captcha){
-escribir_captcha.innerHTML = (numero_al_azar);}
-
-let boton_comprobar = document.querySelector("#boton_enviar");
-if(boton_comprobar){
-boton_comprobar.addEventListener("click", leerdato);}
-
-function leerdato()
-{   let comprobante = document.querySelector("#mensaje_comprobar");
-    let entrada_usuario = document.querySelector("#leer").value;
-    if (entrada_usuario == numero_al_azar)
-    {
-
+function captcha (){
+let numeroAzar = Math.floor((Math.random() * 1000));
+let escribirCaptcha = document.querySelector("#captchaid");
+if(escribirCaptcha){
+escribirCaptcha.innerHTML = (numeroAzar);}
+}
+function leerdato (){   
+    let comprobante = document.querySelector("#mensajeComprobar");
+    let entradaUsuario = document.querySelector("#leer").value;
+    let numeroAzar = document.getElementById("captchaid");
+    numeroAzar = numeroAzar.innerHTML;
+    console.log(numeroAzar);
+    console.log(entradaUsuario);
+    if (entradaUsuario == numeroAzar){
         comprobante.innerHTML = ("Captcha correcto, mensaje enviado correctamente!");
-
     }
     else{
-        comprobante.innerHTML = ("Captcha incorrecto, mensaje no enviado, el captcha se recargara en 4 segundos!");
-        setTimeout( "refresh()", 3500 );
-        
-    }
-}
-function refresh()
-{
-    location.reload(true);
-}
+        comprobante.innerHTML = ("Captcha incorrecto, mensaje no enviado, vuelva a intentar!");
+        captcha();   
+}   }
+
+let botonComprobar = document.querySelector("#btnEnviarCaptcha");
+if(botonComprobar){
+botonComprobar.addEventListener("click", leerdato);}
 /*----------------------------------------------------------------------------------------------------------*/
 /*----------------------------------------------------------------------------------------------------------*/
 /*-----------------------------------------PARTE 2 TPE------------------------------------------------------*/
@@ -146,9 +143,7 @@ function CrearCeldas(indice, final) {
         cell1.innerHTML = planes[i].plan300;
         cell2.innerHTML = planes[i].plan600;
         cell3.innerHTML = planes[i].plan900;
-    }
-    }
-}
+}   }   }
 console.log(planes);
 
 function borrarjson() {
@@ -160,8 +155,7 @@ function borrarjson() {
         }
         planes.splice(0, planes.length);
         console.log(planes);
-    }
-}
+}   }
 function AgregarValores() {
     let NuevosPlanes = {
         "plan300": document.querySelector("#input300").value,
@@ -183,11 +177,32 @@ function Agregar3Valores() {
         }
         planes.push(NuevosPlanes);
     }
-   
         CrearCeldas(planes.length - 3, planes.length);
-    
     console.log(planes);
 }
-/*----------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------opcionales--------------------------------------------------------*/
+/*----------------------------------------------------buscar----------------------------------------------------------*/
+function buscarTabla (palabraBuscada){
+    let filas = document.querySelectorAll("tr");
+    for (let i=0; i < filas.length; i++){
+    let celdas = filas[i].children;
+        for (let j=0; j < celdas.length; j++){
+            let palabraEncontrada = celdas[j].innerHTML;
+            console.log(palabraEncontrada);
+            if (palabraBuscada == palabraEncontrada){
+            resaltarFila(celdas[j]);
+}   }   }   }
+function resaltarFila(lugar){
+let lugarEncontrado = lugar.parentElement;
+lugarEncontrado.classList.add("resaltado");
+}
+function recibirBusqueda(){
+let inputBuscado = document.getElementById("inputResaltaBusqueda").value;
+buscarTabla(inputBuscado);
+}
+let btnResaltarBuscado = document.getElementById("btnResaltar");
+if(btnResaltarBuscado){
+btnResaltarBuscado.addEventListener("click", recibirBusqueda);}
+/*------------------------------------------------------------------------------------------------------------------*/
 
 }/*--llave final---*/
