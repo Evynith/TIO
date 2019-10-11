@@ -8,7 +8,7 @@ function iniciarPagina() {
 /*----------------------------------------------------------------------------------------------------------*/
 /*-------------------------------------------logo-----------------------------------------------------------*/
     function linkear_home(){
-        location.href = 'index.html';
+        location.href = 'index.php';
     }
     
     let home = document.querySelector(".logo");
@@ -52,13 +52,13 @@ botonMoto.addEventListener("click", function(){
 })}
 /*----------------------------------------------menu home---------------------------------------------------*/
 function linkear_vehiculo(){
-    location.href = 'vehiculos.html';
+    location.href = 'vehiculos.php';
 }
 function linkear_mantenimiento(){
     location.href = 'mantenimiento.html';
 }
 function linkear_salud(){
-    location.href = 'salud.html';
+    location.href = 'salud.php';
 }
 
 let vehiculos = document.querySelector("#vehiculos");

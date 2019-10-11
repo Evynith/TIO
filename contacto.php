@@ -16,31 +16,7 @@
 <body>
     <dic class="contenedor">
 
-        <nav>
-            <figure class="logo">
-                <img src="images/logo.png" alt="logo" class="logo">
-            </figure>
-
-            <ul class="menuSuperior_PC">
-                <li><a class="botonSuperior" href="index.html"><i class="fas fa-briefcase"></i> Planes</a></li>
-                <li><a class="botonSuperior" href="contacto.html"><i class="fas fa-headset"></i> Contactanos</a></li>
-                <li class="botonSuperior"> <i class="fas fa-search"></i></li>
-            </ul>
-
-            <ul class="invisible" id="menuSuperior_Movil">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="vehiculos.html">Vehiculos</a></li>
-                <li><a href="mantenimiento.html">Hogar</a></li>
-                <li><a href="mantenimiento.html">Tecnologia</a></li>
-                <li><a href="salud.html">Salud</a></li>
-                <li><a href="mantenimiento.html">Formas de Pago</a></li>
-                <li><a href="mantenimiento.html">Preguntas Frecuentes</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-
-            <button class="botonMovil">ATR</button>
-
-        </nav>
+        <?php include('nav.html'); ?>
 
         <div class="centro">
         <header class="header">
@@ -115,66 +91,7 @@
 
         </div>
 
-        <footer>
-            <div class="piePagina">
-                <ul>
-                    <li>
-                        <h4>Planes</h4>
-                    </li>
-                    <li>
-                        <h5>Vehículos</h5>
-                    </li>
-                    <li><a href="vehiculos.html#motocicletas">Moto</a></li>
-                    <li><a href="vehiculos.html#bicicletas">Bicicleta</a></li>
-                    <li><a href="vehiculos.html#autos">Auto</a></li>
-                </ul>
-                <ul>
-                    <li>
-                        <h5>Hogar</h5>
-                    </li>
-                    <li><a href="mantenimiento.html">Basico</a></li>
-                    <li><a href="mantenimiento.html">Medio</a></li>
-                    <li><a href="mantenimiento.html">Premium</a></li>
-                </ul>
-                <ul>
-                    <li>
-                        <h5>Tecnología</h5>
-                    </li>
-                    <li><a href="mantenimiento.html">Basico</a></li>
-                    <li><a href="mantenimiento.html">Medio</a></li>
-                    <li><a href="mantenimiento.html">Premium</a></li>
-                    <li>
-                </ul>
-                <ul>
-                    <h5>Salud</h5>
-                    </li>
-                    <li><a href="salud.html">Basico</a></li>
-                    <li><a href="salud.html">Medio</a></li>
-                    <li><a href="salud.html">Premium</a></li>
-                </ul>
-                <ul>
-                    <li><a href="mantenimiento.html">
-                            <h5>Comparacion de Planes</h5>
-                        </a></li>
-                    <li><a href="mantenimiento.html">
-                            <h5>Formas de Pago</h5>
-                        </a></li>
-                    <li><a href="mantenimiento.html">
-                            <h5>Preguntas Frecuentes</h5>
-                        </a></li>
-                    <li><a href="contacto.html">
-                            <h5>¿Quiénes Somos?</h5>
-                        </a></li>
-                </ul>
-            </div>
-            <div class="redes">
-                <ul>
-                    <li>Facebook</li>
-                    <li>Instagram</li>
-                    <li>twitter</li>
-                </ul>
-            </div>
-        </footer>
+        <?php include('footer.html'); ?>
         </div>
 </body>
 
